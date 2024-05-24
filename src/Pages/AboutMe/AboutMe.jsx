@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import image from "../../assets/me.jpg";
+// import image from "../../assets/me.jpg";
+import image2 from "../../assets/about.png";
 import { useTypewriter } from "react-simple-typewriter";
 import facebook from '../../assets/Social-Icons/facebook.png'
 import instagram from '../../assets/Social-Icons/instagram.png'
@@ -26,9 +27,13 @@ const AboutMe = () => {
             <Link to='#'> <img className="h-12 w-12" src={github} alt="" /> </Link>
             <Link to='#'> <img className="h-12 w-12" src={twitter} alt="" /> </Link>
        </div>
+       <div className="flex gap-2 flex-col lg:flex-row">
+        <Link className="bg-btn px-5 py-3 rounded font-bold hover:bg-btn-hover text-white">Download Cv</Link>
+        <Link className="bg-btn px-5 py-3 rounded font-bold hover:bg-btn-hover text-white">Contact Me</Link>
+       </div>
       </div>
       <div className="flex-1 flex justify-center">
-        <img className="h-96 w-72 rounded-xl" src={image} alt="" />
+        <img className="rounded-xl" src={image2} alt="" />
       </div>
     </div>
   );

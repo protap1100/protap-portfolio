@@ -1,6 +1,6 @@
 const Project = () => {
     return (
-        <div>
+        <div className="mt-10">
             <h1>Project Base</h1>
         </div>
     );
