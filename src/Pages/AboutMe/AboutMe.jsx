@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-// import image from "../../assets/me.jpg";
-import image2 from "../../assets/about.png";
+import image from "../../assets/me.jpg";
+// import image2 from "../../assets/about.png";
 import { useTypewriter } from "react-simple-typewriter";
 import facebook from '../../assets/Social-Icons/facebook.png'
 import instagram from '../../assets/Social-Icons/instagram.png'
@@ -15,8 +15,9 @@ const AboutMe = () => {
     deleteSpeed:50,
     delaySpeed:1000,
   });
+  
   return (
-    <div className="flex lg:flex-row flex-col gap-5 border border-black p-10">
+    <div className="flex lg:flex-row mt-10 flex-col gap-5 border border-black p-10">
       <div className="flex-1 flex flex-col gap-4 justify-center items-center">
        <h1 className=" text-2xl lg:text-4xl   text-center font-bold">About Me</h1>
        <h1 className=" text-2xl lg:text-4xl  text-center font-bold">I Am A <span className="text-purple-700">{text}</span> </h1>
@@ -32,8 +33,8 @@ const AboutMe = () => {
         <Link className="bg-btn px-5 py-3 rounded font-bold hover:bg-btn-hover text-white">Contact Me</Link>
        </div>
       </div>
-      <div className="flex-1 flex justify-center">
-        <img className="rounded-xl" src={image2} alt="" />
+      <div className="flex-1 flex justify-center ">
+      <img className="rounded-xl w-72 h-96 transform transition-transform duration-700 hover:brightness-120 hover:shadow-xl" src={image} alt="About Me" />
       </div>
     </div>
   );

@@ -15,9 +15,7 @@ const Navbar = () => {
   const router = [
     { id: 1, path: "/", name: "Home" },
     { id: 2, path: "/about", name: "About" },
-    { id: 3, path: "/services", name: "Services" },
     { id: 4, path: "/contact", name: "Contact" },
-    { id: 5, path: "/faq", name: "FAQ" },
   ];
 
   return (
@@ -34,7 +32,7 @@ const Navbar = () => {
         <div className="font-bold">
           <ul
             className={`md:flex items-center md:gap-8 absolute md:static top-16 left-0 w-full bg-white md:w-auto md:bg-transparent transition-all duration-500 ease-in-out ${
-              open ? "translate-x-0 w-3/4" : "-translate-x-full md:translate-x-0"
+              open ? "translate-x-0 w-2/4" : "-translate-x-full md:translate-x-0"
             }`}
           >
             {router.map((route) => (
@@ -46,7 +44,7 @@ const Navbar = () => {
                       ? "pending"
                       : isActive
                       ? `${open ? 'p-2 w-1/3 ' : 'p-2 w-full '}bg-gray-200 border-b-2 border-black rounded font-bold`
-                      : `block p-2 rounded font-bold text-gray-700 hover:bg-nav  hover:border-black ${
+                      : `block p-2 rounded font-bold text-gray-700 hover:bg-gray-200 hover:border-black transition-all duration-1000 ease-in-out ${
                           open ? '' : 'border-none'
                         } md:hover:text-blue-600 `
                   }
