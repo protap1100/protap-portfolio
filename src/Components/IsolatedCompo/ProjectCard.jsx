@@ -1,5 +1,4 @@
-import React from 'react';
-import { FaExternalLinkAlt, FaGithub, FaKey, FaList, FaTools } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaGithub, FaKey, FaTools } from 'react-icons/fa';
 
 const ProjectCard = ({ project }) => {
   const { name, liveLink, githubClient, githubServer, image, keyFeature, overview, technology } = project;
