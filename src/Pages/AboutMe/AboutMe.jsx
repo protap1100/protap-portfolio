@@ -31,7 +31,7 @@ const AboutMe = () => {
        </div>
        <div className="flex gap-2 flex-col lg:flex-row">
         <Link to='https://drive.google.com/file/d/1cV3KBG5B8V_tkgVqfRkX_TncC-Pcinx-/view?usp=drive_link' className="bg-btn px-5 py-3 rounded font-bold hover:bg-btn-hover text-white">Download Cv</Link>
-        <Link className="bg-btn px-5 py-3 rounded font-bold hover:bg-btn-hover text-white">Contact Me</Link>
+        <Link to='/contact' className="bg-btn px-5 py-3 rounded font-bold hover:bg-btn-hover text-white">Contact Me</Link>
        </div>
       </div>
       <div className="flex-1 flex justify-center ">
