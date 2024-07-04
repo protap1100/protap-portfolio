@@ -1,16 +1,42 @@
+import emailjs from "emailjs-com";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Contact = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "Resume-Service", // Replace with your service ID
+        "template_0avua0t", // Replace with your template ID
+        e.target,
+        "vn2WJCE5ovXFUzwct" // Replace with your user ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success("Message Sent Successfully");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send message. Please try again later.");
+        }
+      );
+
+    e.target.reset();
+  };
+
   return (
     <div className="mt-5 container mx-auto">
-      <h1 className="text-center my-10 font-bold text-3xl text-green-700">
+      <h1 className="text-center my-10 font-bold text-3xl ">
         Message Me
       </h1>
       <section className="py-6 mt-5 bg-gray-200 dark:text-gray-900 rounded-xl">
         <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
           <div className="items-center justify-center p-12">
             <h1 className="text-4xl font-bold">Get in touch</h1>
-            <p className="pt-2 pb-4">
-              Fill in the form to start a conversation
-            </p>
+            <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
             <div className="space-y-4">
               <p className="flex items-center">
                 <svg
@@ -25,7 +51,7 @@ const Contact = () => {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-                <span>Kumkumari,Ashulia,Dhaka</span>
+                <span>Kumkumari, Ashulia, Dhaka</span>
               </p>
               <p className="flex items-center">
                 <svg
@@ -53,8 +79,9 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex items-center justify-center p-12">
+            <ToastContainer></ToastContainer>
             <div className="mx-auto w-full max-w-[550px]">
-              <form action="https://formbold.com/s/FORM_ID" method="POST">
+              <form onSubmit={sendEmail}>
                 <div className="mb-5">
                   <label className="mb-3 block text-base font-medium text-[#07074D]">
                     Full Name
@@ -104,7 +131,10 @@ const Contact = () => {
                   ></textarea>
                 </div>
                 <div>
-                  <button className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none">
+                  <button
+                    type="submit"
+                    className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none"
+                  >
                     Submit
                   </button>
                 </div>

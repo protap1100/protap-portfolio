@@ -1,4 +1,5 @@
 import Education from "../../Components/IsolatedCompo/Education";
+import Skill from "../../Components/IsolatedCompo/Skill";
 import AboutMe from "../AboutMe/AboutMe";
 import Contact from "../Contact/Contact";
 import Project from "../Project/Project";
@@ -10,6 +11,7 @@ const Home = () => {
            <AboutMe></AboutMe>
            <Project></Project>
            <Education></Education>
+           <Skill></Skill>
            <Contact></Contact>
         </div>
     );

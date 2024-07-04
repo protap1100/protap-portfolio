@@ -4,5 +4,7 @@ import { router } from './Router/Routes'
 import { RouterProvider } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-     <RouterProvider router={router} />
+     <RouterProvider router={router} >
+     </RouterProvider>
+    
 )
