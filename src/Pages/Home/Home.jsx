@@ -1,4 +1,5 @@
 import Education from "../../Components/IsolatedCompo/Education";
+import OthersSkill from "../../Components/IsolatedCompo/OthersSkill";
 import Skill from "../../Components/IsolatedCompo/Skill";
 import AboutMe from "../AboutMe/AboutMe";
 import Contact from "../Contact/Contact";
@@ -10,6 +11,7 @@ const Home = () => {
         <div className="mt-10">
            <AboutMe></AboutMe>
            <Project></Project>
+           <OthersSkill></OthersSkill>
            <Education></Education>
            <Skill></Skill>
            <Contact></Contact>
