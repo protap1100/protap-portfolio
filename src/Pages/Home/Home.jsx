@@ -4,7 +4,6 @@ import Skill from "../../Components/IsolatedCompo/Skill";
 import AboutMe from "../AboutMe/AboutMe";
 import Contact from "../Contact/Contact";
 import Project from "../Project/Project";
-// import Project from "../Project/Project";
 
 const Home = () => {
     return (
