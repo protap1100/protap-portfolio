@@ -4,7 +4,7 @@ const educationData = [
     institute: "Dhaka Board",
     subject: "Science",
     result: "GPA 5.00",
-    session: "2017/18",
+    session: "2014/15",
   },
   {
     title: "Diploma in Engineering",
